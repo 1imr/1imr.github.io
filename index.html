@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --main-color: 1; /* Numeric variable */
+      --main-color: #3498db; /* Default color */
     }
 
     body {
@@ -32,15 +32,18 @@
     function changeColor() {
       if (colorVariable === 1) {
         document.documentElement.style.setProperty('--main-color', '#3498db'); // Blue
-        colorVariable = 2; // Update the variable to a different value
+        colorVariable = 2;
       } else if (colorVariable === 2) {
         document.documentElement.style.setProperty('--main-color', '#ff0000'); // Red
-        colorVariable = 1; // Update the variable to a different value
+        colorVariable = 1;
       }
 
       // Update the displayed value
       document.getElementById('colorVariableDisplay').textContent = colorVariable;
     }
+
+    // Call the changeColor function on page load
+    changeColor();
   </script>
 </body>
 </html>
